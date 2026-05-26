@@ -1,5 +1,4 @@
 import streamlit as st
-import streamlit as st
 # 導入服務帳戶連接核心套件
 from streamlit_gsheets import GSheetsConnection
 
@@ -22,7 +21,3 @@ st.dataframe(df)
 
 # 4. 拆解底層資訊給學生看
 st.write("經過 Python 分析，這張表格擁有的『直欄欄位名稱（Columns）』有：", list(df.columns))
-
-with col4:
-    st.markdown("### Stock (庫存)")
-    st.write("這裡未來要放『庫存』的卡片")
