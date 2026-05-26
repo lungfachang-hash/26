@@ -24,15 +24,3 @@ with col2:
 with col3:
     st.markdown("### Done (已完成)")
     st.write("這裡未來要放『已完成』的卡片")
-
-    # 第 12 行：透過連線器執行 .update() 指令，把拼接完的全新大表格，整砣蓋回雲端的 "Tasks" 分頁
-
-    conn.update(worksheet="Tasks", data=updated_df)
-
-    # 第 13 行：在網頁上噴出綠色的成功提示小框框
-
-    st.success(" 恭喜！資料已成功跨越網路，寫入 Google 試算表！")
-
-    # 第 14 行：強制網頁自我重新整理（Rerun），這會讓程式重新回到第 6 行，抓到剛剛寫進去的最新表格
-
-    st.rerun()
